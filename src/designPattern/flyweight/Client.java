@@ -2,7 +2,7 @@ package designPattern.flyweight;
 
 /**
  * @author Kevin
- * @description
+ * @description 利用共享技术有效的支持大量的细粒度对象
  * @date 2017/2/16
  */
 public class Client {

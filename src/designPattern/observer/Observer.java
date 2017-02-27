@@ -2,7 +2,7 @@ package designPattern.observer;
 
 /**
  * @author Kevin
- * @description
+ * @description  观察者
  * @date 2017/2/15
  */
 public interface Observer {

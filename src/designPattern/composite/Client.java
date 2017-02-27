@@ -2,7 +2,8 @@ package designPattern.composite;
 
 /**
  * @author Kevin
- * @description
+ * @description 将对象组合成树形结构，以表示"部分-整体"的层次结构，
+ * 组合模式使得用户对单个对象和组合对象的使用具有一致性。
  * @date 2017/2/15
  */
 public class Client {

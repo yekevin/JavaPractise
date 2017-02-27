@@ -5,5 +5,7 @@ package designPattern.iterator;
  * @description
  * @date 2017/2/23
  */
-public class Aggregate {
+public abstract class Aggregate {
+
+    public abstract Iterator createIterator();
 }

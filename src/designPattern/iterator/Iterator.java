@@ -5,5 +5,11 @@ package designPattern.iterator;
  * @description
  * @date 2017/2/23
  */
-public interface Iterator {
+public interface Iterator<E> {
+
+    boolean hasNext();
+
+    E next();
+
+    void remove();
 }
