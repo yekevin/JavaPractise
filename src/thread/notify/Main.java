@@ -1,4 +1,4 @@
-package threadNotify;
+package thread.notify;
 
 /**
  * @author Kevin
