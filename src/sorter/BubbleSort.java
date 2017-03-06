@@ -1,0 +1,46 @@
+package sorter;
+
+import java.util.Comparator;
+
+/**
+ * @author Kevin
+ * @description 冒泡排序
+ * 1.比较相邻的元素。如果第一个比第二个大，就交换他们两个。
+ * 2.对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。
+ * 3.针对所有的元素重复以上的步骤，除了最后一个。
+ * 4.持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。
+ * @date 2017/3/5
+ */
+public class BubbleSort implements Sorter {
+    @Override
+    public <T extends Comparable<T>> void sort(T[] list) {
+        boolean swapped = true;
+        for (int i = 1, len = list.length; i < len && swapped; i++) {
+            swapped = false;
+            for (int j = 0; j < len - i; j++) {
+                if (list[j].compareTo(list[j + 1]) > 0) {
+                    T temp = list[j];
+                    list[j] = list[j + 1];
+                    list[j + 1] = temp;
+                    swapped = true;
+                }
+            }
+        }
+    }
+
+    @Override
+    public <T> void sort(T[] list, Comparator comp) {
+        boolean swapped = true;
+        for (int i = 0, len = list.length; i < len && swapped; i++) {
+            swapped = false;
+            for (int j = 0; j < len - 1; j++) {
+                if (comp.compare(list[j], list[j + 1]) > 0) {
+                    T temp = list[j];
+                    list[j] = list[j + 1];
+                    list[j + 1] = temp;
+                    swapped = true;
+                }
+            }
+        }
+    }
+}
