@@ -20,10 +20,10 @@ public class SelectSort implements Sorter {
                 if (list[j].compareTo(list[k]) < 0) {
                     k = j;
                 }
-                temp = list[i];
-                list[i] = list[k];
-                list[k] = temp;
             }
+			temp = list[i];
+            list[i] = list[k];
+            list[k] = temp;
         }
     }
 
