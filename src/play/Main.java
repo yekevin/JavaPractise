@@ -1,7 +1,8 @@
 package play;
 
 import java.util.*;
-import java.util.concurrent.*;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
@@ -22,11 +23,6 @@ public class Main {
 //        System.out.println(random2.nextInt());
 //        Thread.interrupted();
 
-            GT<Integer> gti = new GT<Integer>();
-            gti.var=1;
-            GT<String> gts = new GT<String>();
-            gts.var=2;
-            System.out.println(gti.var);
 
         AtomicBoolean atomicBoolean = new AtomicBoolean();
         atomicBoolean.get();
@@ -38,7 +34,7 @@ public class Main {
 //        Arrays.toString();
 //        Arrays.deepToString();
 
-        Map<String,String> map = new HashMap();
+        Map<String, String> map = new HashMap();
         map.entrySet().iterator();
 
         Thread t = new Thread(new Runnable() {
@@ -49,7 +45,7 @@ public class Main {
         });
 
         ScheduledThreadPoolExecutor s = new ScheduledThreadPoolExecutor(5);
-        s.schedule(t,10,TimeUnit.SECONDS);
+        s.schedule(t, 10, TimeUnit.SECONDS);
 
         Timer timer = new Timer("timer");
         TimerTask timerTask = new TimerTask() {
@@ -58,25 +54,21 @@ public class Main {
 
             }
         };
-        timer.schedule(timerTask,100);
+        timer.schedule(timerTask, 100);
 
-        Main.add(1,2);
-        Main.add(1,2.1);
-        Main.add(1,"1");
+        Main.add(1, 2);
+        Main.add(1, 2.1);
+        Main.add(1, "1");
 
-        Main.<Integer>add(1,2);
+        Main.<Integer>add(1, 2);
 //        Main.<Integer>add(1,2.2);
-        Main.<Number>add(1,2.2);
+        Main.<Number>add(1, 2.2);
     }
 
 
-    public static <T> void add(T x ,T y){
+    public static <T> void add(T x, T y) {
 
     }
 }
 
 
-class GT<T>{
-    public static int var=0;
-    public void nothing(T x){}
-}

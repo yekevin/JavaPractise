@@ -4,7 +4,7 @@ package gc;
  * @author Kevin
  * @description
  * @date 2017/3/2
- * Vm Args:-verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8 -XX:UseSerialGC
+ * Vm Args:-verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8 -XX:+UseSerialGC
  */
 public class MinorGcTest {
 
